@@ -2,7 +2,6 @@ library(shiny)
 library(tidyverse)
 library(data.table)
 library(plotly)
-library(d3wordcloud)
 library(gapminder)
 
 # Define UI for application that draws a histogram
