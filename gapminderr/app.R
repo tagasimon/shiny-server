@@ -3,6 +3,8 @@ library(tidyverse)
 library(data.table)
 library(plotly)
 library(gapminder)
+library(colourpicker)
+library(shinycssloaders)
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -21,7 +23,7 @@ ui <- fluidPage(
         ),
         mainPanel(
             h1("Gapminder Dataset"),
-            plotly::plotlyOutput("plot",height = "600")
+            plotly::plotlyOutput("plot",height = "600") %>% withSpinner()
         )
     )
 )
