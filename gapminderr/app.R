@@ -19,11 +19,14 @@ ui <- fluidPage(
                         multiple = TRUE,
                         selected = "Europe"),
             # Add a slider selector for years to filter
-            sliderInput("years", "Years", min = min(gapminder$year), max = max(gapminder$year), value = c(1977, 2002))
+            sliderInput("years", "Years", 
+                        min = min(gapminder$year), 
+                        max = max(gapminder$year), 
+                        value = c(1977, 2002))
         ),
         mainPanel(
             h1("Gapminder Dataset"),
-            plotly::plotlyOutput("plot",height = "600") %>% withSpinner()
+            plotly::plotlyOutput("plot",height = "600") %>% withSpinner(color="#0dc5c1")
         )
     )
 )
